@@ -9,7 +9,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
     submitBtn.style.display = 'none';
 
     inputField.addEventListener('keyup', ()=>{
-        if(75>= document.querySelector('.input-field').value.length >0 ){
+        if(inputField.value.length>0){
+            if(inputField.value.length<=75){
+                submitBtn.style.display = 'none';
+            }
             submitBtn.style.display = 'block';
         }else{
             submitBtn.style.display = 'none';
@@ -56,9 +59,19 @@ document.addEventListener('DOMContentLoaded', ()=>{
     window.addEventListener('resize',()=>{
         const width = window.innerWidth;
         const card = document.querySelector('.card');
+        
 
-        card.style.maxWidth = width-100;
-        inputField.style.maxWidth = width - 150;
+        if(width > 400){
+            console.log(width);
+            card.style.maxWidth = "400px";
+            inputField.style.Width = "300px";
+        }
+        else if(width <= 400 ){
+            card.style.maxWidth = `${width-20}px`;
+            inputField.style.Width = `${width-100}px` ;
+        }
+        
+        
     });
 
 });
