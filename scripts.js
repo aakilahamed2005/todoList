@@ -3,12 +3,13 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const submitBtn = document.querySelector('.submit-btn'); // submit button selector
     const tasksContainer = document.querySelector('.tasks');
     const inputField = document.querySelector('.input-field');
+    
 
 
     submitBtn.style.display = 'none';
 
     inputField.addEventListener('keyup', ()=>{
-        if(document.querySelector('.input-field').value.length >0){
+        if(75>= document.querySelector('.input-field').value.length >0 ){
             submitBtn.style.display = 'block';
         }else{
             submitBtn.style.display = 'none';
@@ -51,5 +52,13 @@ document.addEventListener('DOMContentLoaded', ()=>{
         return false;
     })
 
+
+    window.addEventListener('resize',()=>{
+        const width = window.innerWidth;
+        const card = document.querySelector('.card');
+
+        card.style.maxWidth = width;
+        inputField.style.maxWidth = width - 100;
+    });
 
 });
