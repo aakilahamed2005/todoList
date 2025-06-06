@@ -59,19 +59,20 @@ document.addEventListener('DOMContentLoaded', ()=>{
     window.addEventListener('resize',()=>{
         const width = window.innerWidth;
         const card = document.querySelector('.card');
-        
+
 
         if(width > 400){
             console.log(width);
             card.style.maxWidth = "400px";
             inputField.style.Width = "300px";
         }
-        else if(width <= 400 ){
+        else if(width <= 400){
             card.style.maxWidth = `${width-20}px`;
-            inputField.style.Width = `${width-100}px` ;
+            inputField.style.Width = `${width-100}px`;
+            document.querySelector('.task-box').style.marginLeft = "5px";
+            document.querySelector('.task-box').style.marginRight = "5px";
         }
-        
-        
+
     });
 
 });
