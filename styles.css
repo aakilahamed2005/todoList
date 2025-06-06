@@ -12,7 +12,6 @@ header{
 h1{
 color: #8254ee;
 font-family: Arial;
-
 }
 
 section{
@@ -83,20 +82,6 @@ section .card form .submit-btn:hover{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-}
-
-@media (max-width: 767px) {
-  .tasks .task-box{
-    margin: 5px 30px 5px 30px;
-    padding: 15px 20px 15px 20px;
-    background-color: #8254ee;
-    font-size: 20px;
-    font-family: Arial;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
 }
 
 .tasks .task-box .close-btn{
