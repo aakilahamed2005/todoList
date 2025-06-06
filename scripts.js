@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const tasksContainer = document.querySelector('.tasks');
     const inputField = document.querySelector('.input-field');
     const windowWidthFixed = window.innerWidth;
-    alert(windowWidthFixed);
+    document.querySelector('#window_width').innerHTML = `${windowWidthFixed}px`;
     
 
     submitBtn.style.display = 'none';
