@@ -1,49 +1,55 @@
 document.addEventListener('DOMContentLoaded', ()=>{
-    const form = document.querySelector('form'); //form selector
-    const submit_btn = document.querySelector('.submit-btn'); // submit button selector
-    document.querySelector('.input-field')
+    const form = document.querySelector('.form'); //form selector
+    const submitBtn = document.querySelector('.submit-btn'); // submit button selector
+    const tasksContainer = document.querySelector('.tasks');
+    const inputField = document.querySelector('.input-field');
 
-    submit_btn.style.display = 'none';
 
-    document.querySelector('.input-field').onkeyup = ()=>{
+    submitBtn.style.display = 'none';
+
+    inputField.addEventListener('keyup', ()=>{
         if(document.querySelector('.input-field').value.length >0){
-            submit_btn.style.display = 'block';
+            submitBtn.style.display = 'block';
         }else{
-            submit_btn.style.display = 'none';
+            submitBtn.style.display = 'none';
         }
         
-    };
+    })
 
     
 
-    form.onsubmit = ()=>{
-        const newtask = document.querySelector('.input-field').value;
+    form.addEventListener("submit", (event)=>{
+        event.preventDefault();
+        const newTask = document.querySelector('.input-field').value;
+        console.log(newTask);
+        
         //clear the input field soon as the form is submitted
         document.querySelector('.input-field').value = '';
 
-        const task_box = document.createElement('div');
+        const taskBox = document.createElement('div');
         const task = document.createElement('div');
-        const close_btn = document.createElement('button');
+        const closeBtn = document.createElement('button');
 
-        task_box.className = 'task-box';
+        taskBox.className = 'task-box';
         task.className = 'task';
-        close_btn.className = 'close-btn';
+        closeBtn.className = 'close-btn';
 
-        document.querySelector('.tasks').append(task_box);
-        task_box.append(task);
-        task_box.append(close_btn);
+        task.innerHTML = newTask;
+        closeBtn.innerHTML = 'X';
 
-        task.innerHTML = newtask;
-        close_btn.innerHTML = 'X';
-
-        close_btn.onclick = ()=>{
-            close_btn.remove();
+        closeBtn.addEventListener('click',()=>{
+            taskBox.remove();
             task.remove();
-            task_box.remove();
-        };
+            closeBtn.remove();
+        });
+        
+        taskBox.append(task, closeBtn);
+        tasksContainer.append(taskBox);
 
-        document.querySelector('tasks')
+    
+
         return false;
-    };
+    })
+
 
 });
