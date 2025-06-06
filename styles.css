@@ -1,6 +1,7 @@
 body{
     background-color: #090909;
     margin: 0px;
+    box-sizing: border-box;
 }
 
 header{
@@ -19,12 +20,12 @@ section{
     flex-direction: column;
     align-items: center;
 }
+
 section .card{
     margin-top: 20px;
     border-radius: 8px;
     padding: 20px;
     background-color: #3b353c;
-    max-width: 400px;
     box-shadow: 2px 2px 15px 2px hsla(0, 0%, 100%, 0.315);
 }
 
@@ -38,7 +39,7 @@ section .card form{
 
 
 section .card form .input-field{
-    width: 300px;
+   width: 300px;
     font-family: Arial;
     padding: 10px;
     font-size: 15px;
@@ -73,7 +74,7 @@ section .card form .submit-btn:hover{
     margin-top: 50px;
 }
 .tasks .task-box{
-    margin: 5px 80px 5px 80px;
+    margin: 5px 20px 5px 20px;
     padding: 15px 20px 15px 20px;
     background-color: #8254ee;
     font-size: 20px;
@@ -82,6 +83,10 @@ section .card form .submit-btn:hover{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+.tasks .task{
+    max-width: 500px;
 }
 
 .tasks .task-box .close-btn{
