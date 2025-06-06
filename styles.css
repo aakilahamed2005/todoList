@@ -74,7 +74,6 @@ section .card form .submit-btn:hover{
     margin-top: 50px;
 }
 .tasks .task-box{
-    margin: 5px 20px 5px 20px;
     padding: 15px 20px 15px 20px;
     background-color: #8254ee;
     font-size: 20px;

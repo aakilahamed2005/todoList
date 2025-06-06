@@ -5,9 +5,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const inputField = document.querySelector('.input-field');
     const windowWidthFixed = window.innerWidth;
 
-    if(windowWidthFixed < 400){
-        document.querySelector('.card').style.margin = "0px";
-    }
+    
     
 
     submitBtn.style.display = 'none';
@@ -59,6 +57,16 @@ document.addEventListener('DOMContentLoaded', ()=>{
         //appending the element to parent element
         taskBox.append(task, closeBtn);
         tasksContainer.append(taskBox);
+
+        if(windowWidthFixed < 400){
+            taskBox.style.marginLeft = "2px";
+            taskBox.style.marginRight = "2px";
+        }
+
+        else{
+            taskBox.style.marginLeft = "10px";
+            taskBox.style.marginRight = "10px";
+        }
     })
 
 
