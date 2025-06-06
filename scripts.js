@@ -57,8 +57,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
         const width = window.innerWidth;
         const card = document.querySelector('.card');
 
-        card.style.maxWidth = width;
-        inputField.style.maxWidth = width - 100;
+        card.style.maxWidth = width-100;
+        inputField.style.maxWidth = width - 150;
     });
 
 });
