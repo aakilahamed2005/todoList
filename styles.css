@@ -39,7 +39,6 @@ section .card form{
 
 
 section .card form .input-field{
-   width: 300px;
     font-family: Arial;
     padding: 10px;
     font-size: 15px;

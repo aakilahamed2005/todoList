@@ -3,8 +3,18 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const submitBtn = document.querySelector('.submit-btn'); // submit button selector
     const tasksContainer = document.querySelector('.tasks');
     const inputField = document.querySelector('.input-field');
+    const card = document.querySelector('.card');
     const windowWidthFixed = window.innerWidth;
 
+
+    if(windowWidthFixed < 400){
+        card.style.width = `${windowWidthFixed-100}px`;
+        inputField.style.width = `${windowWidthFixed-125}px`;
+    }
+    else{
+        card.style.width = '400px';
+        inputField.style.width = '300px';
+    }
     
     
 
@@ -59,8 +69,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
         tasksContainer.append(taskBox);
 
         if(windowWidthFixed < 400){
-            taskBox.style.marginLeft = "2px";
-            taskBox.style.marginRight = "2px";
+            taskBox.style.marginLeft = "5px";
+            taskBox.style.marginRight = "5px";
         }
 
         else{
