@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const tasksContainer = document.querySelector('.tasks');
     const inputField = document.querySelector('.input-field');
     const windowWidthFixed = window.innerWidth;
+    alert(windowWidthFixed);
     
-
 
     submitBtn.style.display = 'none';
 
@@ -77,8 +77,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
     });
 
     if(windowWidthFixed <= 400){
-        card.style.maxWidth = `${width-20}px`;
-        inputField.style.Width = `${width-100}px`;
         document.querySelector('.task-box').style.marginLeft = "5px";
         document.querySelector('.task-box').style.marginRight = "5px";
     }
