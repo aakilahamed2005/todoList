@@ -69,11 +69,15 @@ document.addEventListener('DOMContentLoaded', ()=>{
         tasksContainer.append(taskBox);
 
         if(windowWidthFixed < 400){
-            taskBox.style.marginLeft = "5px";
-            taskBox.style.marginRight = "5px";
+            taskBox.style.marginTop = "2px";
+            taskBox.style.marginBottom = "2px";
+            taskBox.style.marginLeft = "7px";
+            taskBox.style.marginRight = "7px";
         }
 
         else{
+            taskBox.style.marginTop = "5px";
+            taskBox.style.marginBottom = "5px";
             taskBox.style.marginLeft = "10px";
             taskBox.style.marginRight = "10px";
         }
